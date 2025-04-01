@@ -348,7 +348,6 @@ Total1
 sorted_data <- Total1 %>%
   arrange(desc(.[[1]]))
 sorted_data
-```
 
 
 
