@@ -348,7 +348,7 @@ Total1
 sorted_data <- Total1 %>%
   arrange(desc(.[[1]]))
 sorted_data
-```
+
 
 
 
@@ -381,18 +381,11 @@ Total5<- Total4 %>%
   full_join(CFP_T, by = "School")
 Total5
 
-clean_Final <- Total5 %>%
-  filter(!is.na(TD))
-clean_Final
 
-
-clean_Final <- Total5 %>%
-  filter(!is.na(AD_Revenue))%>%
-  filter(!is.na(TD))
 power4 <- c("Big Ten", "Big 12", "ACC", "SEC")
 
 clean_Final$Power4 <- ifelse(clean_Final$Conference %in% power4, 1, 0)
-clean_Final
+clean_Final 
 clean_Final$CFB_Apperances[is.na(clean_Final$CFB_Apperances)] <- 0
 clean_Final$CFP <- ifelse(clean_Final$CFB_Apperances > 0, 1, 0)
 
@@ -435,10 +428,12 @@ Big_12<-clean_Final %>%
 Power4 <- clean_Final %>%
   filter(str_detect(Conference, "SEC|Big Ten|ACC|Big 12"))
 
-clean_Final
 
+clean_Final2 <- Total5 %>%
+  filter(!is.na(AD_Revenue))%>%
+  filter(!is.na(TD))
 
-
+clean_Final2
 
 
 
