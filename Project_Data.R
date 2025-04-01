@@ -380,9 +380,6 @@ Total5<- Total4 %>%
   full_join(CFP_T, by = "School")
 Total5
 
-clean_Final <- Total5 %>%
-  filter(!is.na(TD))
-clean_Final
 
 
 clean_Final <- Total5 %>%
@@ -434,7 +431,10 @@ Big_12<-clean_Final %>%
 Power4 <- clean_Final %>%
   filter(str_detect(Conference, "SEC|Big Ten|ACC|Big 12"))
 
-clean_Final
+College_Data <- clean_Final %>%
+  filter(!is.na(AD_Revenue))%>%
+  filter(!is.na(TD))
+College_Data
 
 
 
