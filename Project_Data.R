@@ -132,7 +132,11 @@ money <- Football_Combined2 %>%
 sorted_data <- money %>%
   arrange(desc(.[[1]]))
 sorted_data
-
+money_clean <- money %>%
+  mutate(across(where(is.character), ~trimws(.))) %>%
+  mutate(
+    Contributions = as.numeric(replace_na(Contributions, 0))
+  )
 library(rvest)
 library(dplyr)
 
