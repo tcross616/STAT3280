@@ -407,7 +407,7 @@ clean_Final$PPG <- as.numeric(as.character(clean_Final$PPG))
 clean_Final$Offense_Total_points <- as.numeric(as.character(clean_Final$Offense_Total_points))
 clean_Final$TD <- as.numeric(as.character(clean_Final$TD))
 clean_Final$OYPG <- as.numeric(as.character(clean_Final$OYPG))
-
+money$Contributions <- as.numeric(as.character(money$Contributions))
 SEC <- clean_Final %>%
   filter(str_detect(Conference, "SEC"))
 SEC
