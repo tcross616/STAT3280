@@ -248,7 +248,7 @@ School10<-read10 %>%
   html_elements("td:nth-child(2)") %>%
   html_text()
 OYPG10<-read10 %>%
-  html_elements("td:nth-child(8)") %>%
+  html_elements("td:nth-child(9)") %>%
   html_text()
 Offense9<-"https://www.ncaa.com/stats/football/fbs/current/team/21/p2"
 read9 <- read_html(Offense9)
@@ -256,7 +256,7 @@ School9<-read9 %>%
   html_elements("td:nth-child(2)") %>%
   html_text()
 OYPG9<-read9%>%
-  html_elements("td:nth-child(8)") %>%
+  html_elements("td:nth-child(9)") %>%
   html_text()
 Offense8<-"https://www.ncaa.com/stats/football/fbs/current/team/21/p3"
 read8 <- read_html(Offense8)
@@ -264,7 +264,7 @@ School8<-read8 %>%
   html_elements("td:nth-child(2)") %>%
   html_text()
 OYPG8<-read8%>%
-  html_elements("td:nth-child(8)") %>%
+  html_elements("td:nth-child(9)") %>%
   html_text()
 Offense10 <- data.frame(School = School10, OYPG= OYPG10)
 Offense9 <- data.frame(School = School9, OYPG= OYPG9)
