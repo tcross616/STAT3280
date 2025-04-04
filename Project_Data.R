@@ -234,6 +234,8 @@ Total_points3<-read3 %>%
 Offense4 <- data.frame(School = School3, TD=TD3, Offense_Total_points = Total_points3, PPG=PPG3)
 Offense4
 
+
+
 Total_Offense<-bind_rows(Offense4,Offense2,Offense)
 Total_Offense
 Total_Offense %>% count(School) %>% filter(n > 1)
@@ -440,9 +442,18 @@ College_Data <- clean_Final %>%
   filter(!is.na(TD))
 College_Data
 
+champ_counts <- c(
+  "Michigan" = 1,
+  "Georgia" = 2,
+  "Alabama" = 3,
+  "LSU" = 1,
+  "Clemson" = 2,
+  "Ohio State" = 2
+)
 
-
-
+College_Data %>%
+  left_join(champ_counts, by = "School") %>%
+  mutate(NCAA_Championships = replace_na(NCAA_Championships, 0))
 
 
 
