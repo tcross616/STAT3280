@@ -442,18 +442,5 @@ College_Data <- clean_Final %>%
   filter(!is.na(TD))
 College_Data
 
-champ_counts <- c(
-  "Michigan" = 1,
-  "Georgia" = 2,
-  "Alabama" = 3,
-  "LSU" = 1,
-  "Clemson" = 2,
-  "Ohio State" = 2
-)
-
-College_Data %>%
-  left_join(champ_counts, by = "School") %>%
-  mutate(NCAA_Championships = replace_na(NCAA_Championships, 0))
-
 
 
