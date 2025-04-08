@@ -442,5 +442,38 @@ College_Data <- clean_Final %>%
   filter(!is.na(TD))
 College_Data
 
+cfp_long <- data.frame(
+  Team = c("Alabama", "Oregon", "Florida State", "Ohio State",
+           "Alabama", "Clemson", "Michigan State", "Oklahoma",
+           "Alabama", "Clemson", "Ohio State", "Washington",
+           "Alabama", "Clemson", "Georgia", "Oklahoma",
+           "Alabama", "Clemson", "Oklahoma",
+           "LSU", "Ohio State", "Clemson", "Oklahoma",
+           "Alabama", "Clemson", "Ohio State",
+           "Alabama", "Michigan", "Georgia",
+           "Georgia", "Michigan", "Ohio State",
+           "Michigan", "Washington", "Texas", "Alabama"),
+  Year = c(2015, 2015, 2015, 2015,
+           2016, 2016, 2016, 2016,
+           2017, 2017, 2017, 2017,
+           2018, 2018, 2018,2018,
+           2019, 2019, 2019,
+           2020, 2020, 2020, 2020,
+           2021, 2021, 2021,
+           2022, 2022, 2022,
+           2023, 2023, 2023,
+           2024, 2024, 2024, 2024),
+  Conference = c("SEC", "Big Ten", "ACC", "Big Ten",
+                 "SEC", "ACC", "Big Ten", "SEC",
+                 "SEC", "ACC", "Big Ten", "Big Ten",
+                 "SEC", "ACC", "SEC", "SEC",
+                 "SEC", "ACC", "Big 12",
+                 "SEC", "Big Ten", "ACC", "SEC",
+                 "SEC", "ACC", "Big Ten",
+                 "SEC", "Big Ten", "SEC",
+                 "SEC", "Big Ten", "Big Ten",
+                 "Big Ten", "Big Ten", "SEC", "SEC"),
+  Appearances = 1
+)
 
 
