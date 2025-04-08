@@ -443,7 +443,7 @@ College_Data <- clean_Final %>%
 College_Data
 
 cfp_long <- data.frame(
-  Team = c("Alabama", "Oregon", "Florida State", "Ohio State",
+  School = c("Alabama", "Oregon", "Florida State", "Ohio State",
            "Alabama", "Clemson", "Michigan State", "Oklahoma",
            "Alabama", "Clemson", "Ohio State", "Washington",
            "Alabama", "Clemson", "Georgia", "Oklahoma",
