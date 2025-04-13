@@ -467,7 +467,7 @@ cfp_long <- data.frame(
                  "SEC", "ACC", "Big Ten", "SEC",
                  "SEC", "ACC", "Big Ten", "Big Ten",
                  "SEC", "ACC", "SEC", "SEC",
-                 "SEC", "ACC", "Big 12",
+                 "SEC", "ACC", "SEC",
                  "SEC", "Big Ten", "ACC", "SEC",
                  "SEC", "ACC", "Big Ten",
                  "SEC", "Big Ten", "SEC",
@@ -476,4 +476,46 @@ cfp_long <- data.frame(
   Appearances = 1
 )
 
+
+Power4_1 <- Power4 %>%
+  mutate(WPY = pmin(WPY, 12),
+    WPY = case_when(
+      School == "Texas" ~ 11,
+      School == "Oregon" ~ 12,
+      School == "Georgia" ~ 10,
+      School == "Tennessee" ~ 10,
+      School == "Indiana" ~ 11,
+      School == "Alabama" ~ 9,
+      School == "Miami" ~ 10,
+      School == "Penn St." ~ 11,
+      School == "Arizona St." ~ 11,
+      School == "Ole Miss" ~ 9,
+      School == "Syracuse" ~ 9,
+      School == "Clemson" ~ 9,
+      School == "LSU" ~ 8,
+      School == "Iowa St." ~ 10,
+       School == "Louisville" ~ 9,
+      School == "Kansas St." ~ 8,
+      School == "Minnesota" ~ 6,
+      School == "Michigan" ~ 7,
+      School == "Illinois" ~ 9,
+      School == "Ohio St." ~ 10,
+      School == "Missouri" ~ 9,
+      School == "Arkansas" ~ 6,
+      School == "Florida" ~ 7,
+      TRUE ~ WPY
+    )
+  )
+SEC <- Power4_1 %>%
+  filter(str_detect(Conference, "SEC"))
+SEC
+ACC<-Power4_1 %>%
+  filter(str_detect(Conference, "ACC"))
+ACC
+Big_10<-Power4_1 %>%
+  filter(str_detect(Conference, "Big Ten"))
+Big_10
+Big_12<-Power4_1 %>%
+  filter(str_detect(Conference, "Big 12"))
+Big_12
 
