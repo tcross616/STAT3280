@@ -470,7 +470,7 @@ cfp_long <- data.frame(
                  "SEC", "ACC", "SEC",
                  "SEC", "Big Ten", "ACC", "SEC",
                  "SEC", "ACC", "Big Ten",
-                 "SEC", "Big Ten", "SEC","Big 12"
+                 "SEC", "Big Ten", "SEC","Big 12",
                  "SEC", "Big Ten", "Big Ten",
                  "Big Ten", "Big Ten", "SEC", "SEC"),
   Appearances = 1
