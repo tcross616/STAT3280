@@ -463,16 +463,17 @@ cfp_long <- data.frame(
            2022, 2022, 2022,2022,
            2023, 2023, 2023,
            2024, 2024, 2024, 2024),
-  Conference = c("SEC", "Big Ten", "ACC", "Big Ten",
-                 "SEC", "ACC", "Big Ten", "SEC",
-                 "SEC", "ACC", "Big Ten", "Big Ten",
-                 "SEC", "ACC", "SEC", "SEC",
-                 "SEC", "ACC", "SEC",
-                 "SEC", "Big Ten", "ACC", "SEC",
-                 "SEC", "ACC", "Big Ten",
-                 "SEC", "Big Ten", "SEC","Big 12",
-                 "SEC", "Big Ten", "Big Ten",
-                 "Big Ten", "Big Ten", "SEC", "SEC"),
+ Conference = c("SEC", "Big Ten", "ACC", "Big Ten",
+               "SEC", "ACC", "Big Ten", "SEC",
+               "SEC", "ACC", "Big Ten", "Big Ten",
+               "SEC", "ACC", "SEC", "SEC",
+               "SEC", "ACC", "SEC",
+               "SEC", "Big Ten", "ACC", "SEC",
+               "SEC", "ACC", "Big Ten",
+               "SEC", "Big Ten", "SEC", "Big 12",
+               "SEC", "Big Ten", "Big Ten",
+               "Big Ten", "Big Ten", "SEC", "SEC"),
+
   Appearances = 1
 )
 
